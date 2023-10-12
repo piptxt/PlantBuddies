@@ -18,3 +18,4 @@ class MainActivity : AppCompatActivity() {
         tvHellaur = findViewById(R.id.hellaur)
     }
 }
+//test
