@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.mobedeve.plantbuddy"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.mobedeve.plantbuddy"
