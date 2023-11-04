@@ -8,11 +8,10 @@
     <item
         android:id="@+id/reminder"
         android:title="Reminder"
-        android:icon="@drawable/ic_reminder"
+        android:icon="@drawable/ic_reminder"/>
    <item
        android:id="@+id/gardenprofile"
        android:title="Garden Profile"
        android:icon="@drawable/ic_gardenprofile"/>
-
 
 </menu>
