@@ -1,8 +1,14 @@
 package com.mobedeve.plantbuddy
 
 
+import android.content.Intent
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,33 +26,59 @@ class Reminder : AppCompatActivity(), TaskItemClickListener
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reminder)
+//        setContentView(R.layout.activity_reminder)
         binding = ActivityReminderBinding.inflate(layoutInflater)
-        //setContentView(binding.root)
+        setContentView(binding.root)
         taskViewModel = ViewModelProvider(this).get(TaskViewModel::class.java)
         binding.newTaskButton.setOnClickListener {
             NewTaskSheet(null).show(supportFragmentManager, "newTaskTag")
         }
         setRecyclerView()
-//        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-//            when (item.itemId) {
-//                R.id.reminder -> true
-//                R.id.notes -> {
+        bottomNavigationView = findViewById(R.id.bottom_navigator)
+        bottomNavigationView.selectedItemId = R.id.reminder
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.reminder -> true
+                R.id.notes -> {
+
 //                    startActivity(Intent(this@Reminder, MainActivity::class.java))
-//                    overridePendingTransition(0, 0)
-//                    true
-//                }
-//                R.id.gardenprofile -> {
-//                    startActivity(Intent(this@Reminder, GardenProfile::class.java))
-//                    overridePendingTransition(0, 0)
-//                    true
-//                }
-//                else -> false
-//            }
-//        }
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                R.id.gardenprofile -> {
+                    startActivity(Intent(this@Reminder, GardenProfile::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                else -> false
+            }
+        }
+
+
+//        val navView: BottomNavigationView = binding.bottomNavigator
+//
+//        val navController = findNavController(R.id.reminder)
+//        // Passing each menu ID as a set of Ids because each
+//        // menu should be considered as top level destinations.
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(
+//                R.id.notes, R.id.gardenprofile
+//            )
+//        )
+//        setupActionBarWithNavController(navController, appBarConfiguration)
+//        navView.setupWithNavController(navController)
+//
+//
+//
 
     }
 
+//    private fun replaceFragment(fragment: Fragment) {
+//        val transaction = supportFragmentManager.beginTransaction()
+//        transaction.replace(R.id.notes, fragment)
+//        transaction.addToBackStack(null)
+//        transaction.commit()
+//    }
     private fun setRecyclerView()
     {
         val mainActivity = this
