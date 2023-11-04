@@ -40,8 +40,7 @@ class Reminder : AppCompatActivity(), TaskItemClickListener
             when (item.itemId) {
                 R.id.reminder -> true
                 R.id.notes -> {
-
-//                    startActivity(Intent(this@Reminder, MainActivity::class.java))
+                    startActivity(Intent(this@Reminder, MainActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
@@ -53,7 +52,6 @@ class Reminder : AppCompatActivity(), TaskItemClickListener
                 else -> false
             }
         }
-
 
 //        val navView: BottomNavigationView = binding.bottomNavigator
 //
