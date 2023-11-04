@@ -8,13 +8,99 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/notes_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#314d36"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Notes"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"
-        android:textColor="@color/black"/>
+        android:textColor="#dfe2de"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notes_header"
+        android:layout_marginTop="0dp"
+        android:background="#a3c59a"
+        android:text="TextView"
+        android:textColor="#A3C59A"
+        android:textSize="0.5sp" />
+
+    <LinearLayout
+        android:id="@+id/note_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="0dp"
+        android:background="#314D36"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineProvider="background"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/text_yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#314D36"
+            android:text="FRI"
+            android:textAlignment="center"
+            android:textColor="#a3c59a"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_icon_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#314D36"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="-"
+            android:textAlignment="center"
+            android:textColor="#a3c59a"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#314D36"
+            android:text="SATURDAY 4TH"
+            android:textAlignment="center"
+            android:textColor="#DEE1DD"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_icon_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="-"
+            android:textColor="#a3c59a"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_tomorrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#314D36"
+            android:text="SUN"
+            android:textAlignment="center"
+            android:textColor="#a3c59a"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/note_ll"
+        android:layout_marginTop="5dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -24,6 +110,8 @@
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>
