@@ -22,7 +22,7 @@ class GardenProfile : AppCompatActivity() {
                 true
             }
                 R.id.notes -> {
-                    startActivity(Intent(this@GardenProfile, MainActivity::class.java))
+                    startActivity(Intent(this@GardenProfile, Notes::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
