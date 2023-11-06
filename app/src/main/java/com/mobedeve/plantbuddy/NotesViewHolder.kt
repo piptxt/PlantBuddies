@@ -1,4 +1,8 @@
 package com.mobedeve.plantbuddy
 
-class NotesViewHolder {
+import androidx.recyclerview.widget.RecyclerView
+
+class NotesViewHolder  {
+    // (private val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root)
+
 }

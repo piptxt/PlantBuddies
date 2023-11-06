@@ -26,4 +26,16 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_itemTitle" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notes_header"
+        android:layout_marginTop="16dp"
+        android:background="#a3c59a"
+        android:textColor="#A3C59A"
+        android:textSize="0.5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_itemBody" />
 </androidx.constraintlayout.widget.ConstraintLayout>

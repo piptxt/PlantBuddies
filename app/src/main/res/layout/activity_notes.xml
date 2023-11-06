@@ -28,6 +28,21 @@
         android:textColor="#A3C59A"
         android:textSize="0.5sp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#314D36"
+        app:fabCustomSize="48dp"
+        app:shapeAppearance="@null"
+        app:tint="#A2C499" />
+
     <LinearLayout
         android:id="@+id/note_ll"
         android:layout_width="match_parent"
@@ -96,6 +111,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/note_ll"

@@ -1,4 +1,3 @@
 package com.mobedeve.plantbuddy
 
-class NotesNoteModel {
-}
+class NotesNoteModel (var title : String, var body : String)
