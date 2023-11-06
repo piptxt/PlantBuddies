@@ -25,7 +25,6 @@
         android:layout_below="@+id/notes_header"
         android:layout_marginTop="0dp"
         android:background="#a3c59a"
-        android:text="TextView"
         android:textColor="#A3C59A"
         android:textSize="0.5sp" />
 
