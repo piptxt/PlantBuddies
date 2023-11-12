@@ -19,29 +19,11 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.login)
             val loginClicked = findViewById<Button>(R.id.signinbut)
             loginClicked.setOnClickListener{
-                setContentView(R.layout.activity_main)
-                bottomNavigationView = findViewById(R.id.bottom_navigator)
-                bottomNavigationView.selectedItemId = R.id.notes
-
-                bottomNavigationView.setOnNavigationItemSelectedListener { item ->
-                    when (item.itemId) {
-                        R.id.reminder -> {
-                            startActivity(Intent(this@MainActivity, Reminder::class.java)) //change to this@Notes eventually
-                            overridePendingTransition(0, 0)
-                            true
-                        }
-                        R.id.notes -> {startActivity(Intent(this@MainActivity, Notes::class.java)) //change to this@Notes eventually
-                        overridePendingTransition(0, 0)
-                            true
-                        }
-                        R.id.gardenprofile -> {
-                            startActivity(Intent(this@MainActivity, GardenProfile::class.java)) //change to this@Notes eventually
-                            overridePendingTransition(0, 0)
-                            true
-                        }
-                        else -> false
-                    }
-                }
+                val intent = Intent(this@MainActivity, GardenProfile::class.java)
+                val username = findViewById<TextView>(R.id.username).text.toString()
+                intent.putExtra("username", username)
+                startActivity(intent)
+                finish()
             }
         }
 

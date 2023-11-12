@@ -3,14 +3,19 @@ package com.mobedeve.plantbuddy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class GardenProfile : AppCompatActivity() {
     private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var tvUsername : TextView
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_garden_profile)
+
+        tvUsername = findViewById(R.id.tvUsername)
+        tvUsername.text = intent.getStringExtra("username")
+
         bottomNavigationView = findViewById(R.id.bottom_navigator)
         bottomNavigationView.selectedItemId = R.id.gardenprofile
 
