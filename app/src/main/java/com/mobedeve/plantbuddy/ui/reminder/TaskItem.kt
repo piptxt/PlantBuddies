@@ -1,7 +1,8 @@
-package com.mobedeve.plantbuddy
+package com.mobedeve.plantbuddy.ui.reminder
 
 import android.content.Context
 import androidx.core.content.ContextCompat
+import com.mobedeve.plantbuddy.R
 import java.time.LocalDate
 import java.time.LocalTime
 import java.util.UUID

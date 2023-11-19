@@ -1,4 +1,4 @@
-package com.mobedeve.plantbuddy
+package com.mobedeve.plantbuddy.ui.reminder
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

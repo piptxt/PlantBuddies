@@ -1,4 +1,4 @@
-package com.mobedeve.plantbuddy
+package oldkotlinfiles.oldkotlinfiles
 
 import androidx.appcompat.app.AppCompatActivity
 import com.mobedeve.plantbuddy.databinding.ActivityNotesViewNoteBinding

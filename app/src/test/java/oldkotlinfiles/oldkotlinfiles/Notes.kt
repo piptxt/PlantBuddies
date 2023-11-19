@@ -1,14 +1,10 @@
-package com.mobedeve.plantbuddy
+package oldkotlinfiles.oldkotlinfiles
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.mobedeve.plantbuddy.databinding.ActivityNotesBinding
+import com.mobedeve.plantbuddy.R
 
 class Notes : AppCompatActivity() {
     // Preliminary Variables

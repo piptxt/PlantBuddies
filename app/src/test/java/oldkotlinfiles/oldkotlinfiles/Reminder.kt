@@ -1,17 +1,13 @@
-package com.mobedeve.plantbuddy
+package oldkotlinfiles.oldkotlinfiles
 
 
 import android.content.Intent
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.mobedeve.plantbuddy.R
 
 import com.mobedeve.plantbuddy.databinding.ActivityReminderBinding
 

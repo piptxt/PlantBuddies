@@ -1,4 +1,4 @@
-package com.mobedeve.plantbuddy
+package com.mobedeve.plantbuddy.ui.reminder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
